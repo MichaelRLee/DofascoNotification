@@ -1,0 +1,49 @@
+table{
+	margin-left:auto;
+	margin-right:auto;
+	border-collapse: collapse;
+	min-width:1024px;
+}
+table.legend{
+	text-align:center;
+}
+th.event{
+	width:30%;
+}
+th.status{
+	width:20%;
+	text-align:left;
+}
+td,th{
+	padding: 4px;
+}
+tr{
+	border: 1px solid #dddddd;
+}
+tr.heading{
+	background-color: #f0f0f0;
+}
+tr.red {
+	background-color: #ffb3ba;
+}
+tr.orange {
+	background-color: #ffdfba;
+}
+tr.yellow {
+	background-color: #ffffba;
+}
+tr.green {
+	background-color: #baffc9	;
+}
+
+@media handheld, only screen and (max-width: 1024px) {
+	table{
+		font-size:2.5em;
+	}
+	th.event{
+		padding-right:20%
+	}
+	tr.green{
+		background-color:#bae1ff;
+	}
+}
