@@ -27,3 +27,21 @@ print('Headers:',response.headers,'\n')
 print('Response:',response.json(),'\n')
 print('Cookies', response.cookies,)
 sys.stdout.close()
+
+# Extract create time
+time_created = 
+
+# Extract incident No.
+#incident_No = 
+
+# Extract short description
+#description =
+
+# Extract caller information
+#caller_info = 
+
+# Extract responded date/time
+#responded_date = 
+
+# Extract resolved date/time
+#resolved_date = 
