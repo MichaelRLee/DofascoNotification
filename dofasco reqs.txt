@@ -1,3 +1,0 @@
-create web app using ServiceNow API to show all critical incidents for the current day.
-
-create an incident in servicenow that has a priority of critical to test. 
