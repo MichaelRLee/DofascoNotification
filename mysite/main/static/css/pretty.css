@@ -1,0 +1,133 @@
+body{
+	margin-left:75px; /*make room for legend sidebar*/
+	margin-right:75px; /*try to make body symetrical*/
+	background-color:#f8f8f8;
+}
+
+/*Center and make table pretty*/
+table{
+	border-collapse: collapse;
+	margin-left:auto;
+	margin-right:auto;
+	min-width:1024px;
+}
+
+/* Heading for event collumn*/
+th.event{
+	width:30%;
+}
+
+/* Heading for additional info */
+th.status{
+	width:20%;
+	text-align:left;
+}
+
+/* General table cell styling */
+td,th{
+	padding: 4px;
+}
+
+/* Give rows a nicer border */
+tr{
+	border: 1px solid #dddddd;
+}
+
+/* Give heading bold font and a different background colour */
+.heading{
+	background-color: #e0e0e0;
+	font-weight:bold;
+}
+
+/* Red Background */
+.red {
+	background-color: #ffb3ba;
+}
+
+/* Orange Background */
+.orange {
+	background-color: #ffdfba;
+}
+
+/* Yellow Background */
+.yellow {
+	background-color: #ffffba;
+}
+
+/* Green Background */
+.green {
+	background-color: #baffc9	;
+}
+
+/* Legend side panel button */
+.slideLeg {
+	position: fixed;
+	top:0;
+	left:0;
+}
+
+/* actual legend area */
+.legend {
+    width: 0; /* Hides side panel*/
+	
+	/*keeps side panel in top left corner, on top of everything*/
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    left: 0;
+	
+    overflow-x: hidden; /* No scroll bar */
+    transition: 0.5s; /* how long animation takes */
+}
+
+/* div branches under legend root */
+.legend div{
+	padding: 5px 5px 5px 5px; /* Nice border padding */
+	
+	/* add nice border */
+	border-style:solid;
+	border-width:1px;
+	border-collapse:collapse;
+	border-color:#DDDDDD;
+}
+
+/* "table" created useing div tags */
+div.div-table{
+	text-align: center; /* centered text */
+	max-width:175px; /*set max size */
+	border-style: hidden; /* Hide any border */
+	background-color: #f0f0f0; /* Nice background colour */
+}
+
+/* applies styling to close legend button */
+.legend .closeLeg {
+    display: block;
+    transition: 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: 50px;
+}
+
+/* responsive design for mobile */
+@media handheld, only screen and (max-width: 1024px) {
+	
+	/* Debug */
+	.green{
+		background-color:#bae1ff;
+	}
+
+	/* Changes to body */
+	body{
+		margin-left:55px; /* decrease padding between table and button */
+		margin-right:55px; 
+		zoom: 4; /* zoom into webpage to make it easier to see */
+		-moz-transform: scale(4); /* incase someone is using firefox */
+		-moz-transform-origin: 0 0;
+	}
+	
+	/* set minimum table size so it's easier to view on mobile */
+	table{
+		min-width:300px;
+	}
+}
