@@ -14,12 +14,12 @@ table{
 
 /* Heading for event collumn*/
 th.event{
-	width:30%;
+	width:50%;
 }
 
 /* Heading for additional info */
 th.status{
-	width:20%;
+	width:50%;
 	text-align:left;
 }
 
