@@ -1,3 +1,8 @@
+body{
+	margin-left:15%;
+	margin-right:15%;
+}
+
 table{
 	border-collapse: collapse;
 	margin-left:auto;
@@ -35,20 +40,25 @@ tr{
 	background-color: #baffc9	;
 }
 
+.slideLeg {
+	position: fixed;
+	top:0;
+	left:0;
+}
+
 .legend {
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #f0f0f0; 
     overflow-x: hidden;
     padding-top: 0px;
     transition: 0.5s;
 }
 
 .legend div{
-	padding: 5px 0px 5px 5px;
+	padding: 5px 5px 5px 5px;
 	border-style:solid;
 	border-width:1px;
 	border-collapse:collapse;
@@ -57,9 +67,10 @@ tr{
 
 div.div-table{
 	text-align: center;
-	max-width:150px;
+	max-width:175px;
 	border-style: hidden;
 	border-color: #f0f0f0;
+	background-color: #f0f0f0; 
 }
 
 .legend .closeLeg {
@@ -70,20 +81,37 @@ div.div-table{
     transition: 0.3s;
     position: absolute;
     top: 0;
-    right: 15px;
+    right: 0;
     font-size: 36px;
     margin-left: 50px;
 }
 
 @media handheld, only screen and (max-width: 1024px) {
-	table{
+	/*
+	body{
+		margin-left:27%;
+		margin-right:27%;
 		font-size:2.5em;
+	}
+	table{
+		font-size:1em;
 	}
 	th.event{
 		padding-right:20%
 	}
-	tr.green{
+	*/
+	.green{
 		background-color:#bae1ff;
 	}
 	/*.legend {padding-top: 15px;}*/
+	body{
+		margin-left:45%;
+		zoom: 4; 
+		-moz-transform: scale(4);
+		-moz-transform-origin: 0 0;
+	}
+	
+	table{
+		min-width:300px;
+	}
 }

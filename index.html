@@ -7,18 +7,9 @@
 	</head>
 	<body>
 		<script src="legend.js"></script>
+		
 		<div id="sideLegend" class="legend">
-			<a href="javascript:void(0)" class="closeLeg" onclick="closeLeg()">&times;</a>
-			<!--
-			<table class="legend">
-				<tr class="heading"><th>Legend</th></tr>
-				<tr class="red"><td>RTP</td></tr>
-				<tr class="orange"><td>Attention</td></tr>	
-				<tr class="yellow"><td>Major</td></tr>
-				<tr class="green"><td>Repage</td></tr>
-				<tr style="background-color:#FFFFFF"><td>Normal</td></tr>
-			</table>
-			-->
+			<a href="javascript:void(0)" class="closeLeg" onclick="closeLeg()"><img src="nav.png" alt="Legend"></a>
 
 			<div class="div-table">
 				<div class="heading">
@@ -39,10 +30,12 @@
 				<div style="background-color:#FFFFFF">
 					Normal <br />
 				</div>
+				<a href="javascript:void(0)" onclick="toggleCB()">Toggle Colourblind</a>
 			</div>
 		</div>
-		<span onclick="openLeg()">Legend</span>
+		<a href="javascript:void(0)" class="slideLeg" onclick="openLeg()"><img src="nav.png" alt="Legend"></a>
 
+		
 		<table class = "main">
 			<tr class="heading">
 				<th class="event"> Event </th>
