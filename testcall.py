@@ -5,7 +5,8 @@ import requests
 import sys
  
 # Set the request parameters
-url = 'https://dev14710.service-now.com/api/now/table/incident?sysparm_limit=1'
+incidents = 10
+url = 'https://dev14710.service-now.com/api/now/table/incident?sysparm_limit='+str(incidents)
 user = 'admin3'
 pwd = 'admin3'
  
@@ -21,27 +22,37 @@ if response.status_code != 200:
    exit()
  
 # Decode the JSON response into a dictionary and use the data. Also moves text to a temp file
-sys.stdout = open('temp.txt','w')
-print('Status:',response.status_code,'\n')
-print('Headers:',response.headers,'\n')
-print('Response:',response.json(),'\n')
-print('Cookies', response.cookies,)
-sys.stdout.close()
+#sys.stdout = open('temp.txt','w')
+#print('Status:',response.status_code,'\n')
+#print('Headers:',response.headers,'\n')
+#print('Response:',response.json(),'\n')
+#print('Cookies', response.cookies,)
+#sys.stdout.close()
 
-# Extract create time
-time_created = 
+for i in range(incidents):
+   # Extract create time
+   time_created = 'Created on: ' + response.json()['result'][i]['sys_created_on']
+   print(time_created)
 
-# Extract incident No.
-#incident_No = 
+   # Extract incident No.
+   incident_No = 'Incident No.: ' + response.json()['result'][i]['number']
+   print(incident_No)
 
-# Extract short description
-#description =
+   # Extract short description
+   description = 'Description: ' + response.json()['result'][i]['short_description']
+   print(description)
 
-# Extract caller information
-#caller_info = 
+   # Extract caller information
+   caller_info = 'Caller ID: ' + response.json()['result'][i]['caller_id']['value']
+   print(caller_info)
 
-# Extract responded date/time
-#responded_date = 
+   # Extract responded date/time
+   responded_date = 'Responded by WhiteBoard at: ' + response.json()['result'][i]['opened_at']
+   print(responded_date)
 
-# Extract resolved date/time
-#resolved_date = 
+   # Extract resolved date/time
+   resolved_date = 'Resolved at: ' + response.json()['result'][i]['resolved_at']
+   print(resolved_date)
+
+   print('\n')
+
