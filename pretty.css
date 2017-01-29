@@ -1,6 +1,6 @@
 body{
-	margin-left:15%;
-	margin-right:15%;
+	margin-left:75px;
+	margin-right:75px;
 }
 
 table{
@@ -105,13 +105,14 @@ div.div-table{
 	}
 	/*.legend {padding-top: 15px;}*/
 	body{
-		margin-left:45%;
+		margin-left:55px;
+		margin-right:55px;
 		zoom: 4; 
 		-moz-transform: scale(4);
 		-moz-transform-origin: 0 0;
 	}
 	
 	table{
-		min-width:300px;
+		min-width:350px;
 	}
 }
