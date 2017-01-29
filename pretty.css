@@ -112,10 +112,10 @@ div.div-table{
 /* responsive design for mobile */
 @media handheld, only screen and (max-width: 1024px) {
 	
-	/* Debug */
+	/* Debug
 	.green{
 		background-color:#bae1ff;
-	}
+	}* /
 
 	/* Changes to body */
 	body{
