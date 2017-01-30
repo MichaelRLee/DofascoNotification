@@ -1,6 +1,13 @@
 {% extends "main/index.html" %}
 {% block content %}
-	{% for c in content%}
-	   <td>{{c}}</td>
+	{% for i in description %}
+		{% for j in resoloution %}
+		{% if forloop.counter == forloop.parentloop.counter %}
+	   <tr>
+	   		<td>{{i}}</td>
+	   		<td>{{j}}</td>
+	   </tr>
+	   {% endif %}
+	   {% endfor %}
 	{% endfor %}
 {% endblock %}

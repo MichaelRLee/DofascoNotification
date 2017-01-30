@@ -32,10 +32,14 @@ if response.status_code != 200:
 #print('Cookies', response.cookies,)
 #sys.stdout.close()
 
+items = []
+desc = []
+res = []
+
 for i in range(incidents):
    # Extract create time
    time_created = 'Created on: ' + response.json()['result'][i]['sys_created_on']
-   print(time_created)
+   #print(time_created)
 
    # Extract incident No.
    incident_No = 'Incident No.: ' + response.json()['result'][i]['number']
@@ -44,6 +48,7 @@ for i in range(incidents):
    # Extract short description
    description = 'Description: ' + response.json()['result'][i]['short_description']
    #print(description)
+   desc.append(description)
 
    # Extract caller information
    caller_info = 'Caller ID: ' + response.json()['result'][i]['caller_id']['value']
@@ -52,17 +57,20 @@ for i in range(incidents):
    # Extract responded date/time
    responded_date = 'Responded by WhiteBoard at: ' + response.json()['result'][i]['opened_at']
    #print(responded_date)
+   res.append(responded_date)
 
    # Extract resolved date/time
    resolved_date = 'Resolved at: ' + response.json()['result'][i]['resolved_at']
    #print(resolved_date)
 
    #print('\n')
-
-
-
+items.append(desc)
+items.append(res)
+print(desc)
+print(res)
 def index(request):
-    return render(request, 'main/home.html',{'content':[time_created]})
+    return render(request, 'main/home.html',{'description': desc,'resoloution': res})
+
 
 ##def info(request):
 ##    return render(request, 'main/home.html',{'content':[description]})
