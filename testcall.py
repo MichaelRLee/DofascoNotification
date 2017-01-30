@@ -3,9 +3,10 @@
 #Need sys to pipe print statements to temp file to manipulate strings
 import requests
 import sys
+import math
  
 # Set the request parameters
-incidents = 10
+incidents = 100
 url = 'https://dev14710.service-now.com/api/now/table/incident?sysparm_limit='+str(incidents)
 user = 'admin3'
 pwd = 'admin3'
@@ -54,5 +55,8 @@ for i in range(incidents):
    resolved_date = 'Resolved at: ' + response.json()['result'][i]['resolved_at']
    print(resolved_date)
 
+   crit = int(response.json()['result'][i]['priority']) + int(response.json()['result'][i]['impact'])
+   crit = ((crit/8)*5)
+   print (math.ceil(crit))
    print('\n')
 
